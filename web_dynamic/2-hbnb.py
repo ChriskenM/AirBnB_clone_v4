@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 """ Starts a Flash Web Application """
 import sys
-sys.path.append('/AirBnB_clone_v4')
+import os
+# Get the current script directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Get the absolute path to the project directory
+project_dir = os.path.abspath(os.path.join(current_dir, '..'))
+
+# Append the project directory to sys.path
+sys.path.append(project_dir)
+
 import uuid
 from models import storage
 from models.state import State
